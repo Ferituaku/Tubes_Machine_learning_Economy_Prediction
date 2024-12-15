@@ -1,0 +1,83 @@
+2. Interpretasi Statistik
+
+2.1 Fitur "SafetySecurity"
+Mean (Rata-rata): 67.24
+Std (Standar Deviasi): 17.54 → Menunjukkan variabilitas cukup tinggi.
+Min & Max: 16.54 hingga 96.32 → Ada variasi besar antar negara.
+Median (50%): 68.93 → Median sedikit lebih tinggi dari mean, menandakan distribusi sedikit skewed ke kiri.
+
+2.2 Fitur "PersonelFreedom"
+Mean: 56.83
+Std: 19.91 → Variabilitas cukup besar.
+Min & Max: 16.16 hingga 94.10 → Distribusi lebar.
+Median (50%): 57.17 → Median mendekati mean, distribusi relatif simetris.
+
+2.3 Fitur "Governance"
+Mean: 50.36
+Std: 17.75 → Variabilitas sedang.
+Min & Max: 13.09 hingga 90.41 → Ada beberapa negara dengan governance sangat buruk.
+Median: 47.51 → Median sedikit lebih rendah dari mean, menandakan skewed ke kanan.
+
+2.4 Fitur "SocialCapital"
+Mean: 54.47
+Std: 10.35 → Variabilitas kecil dibandingkan fitur lain.
+Min & Max: 23.01 hingga 82.56 → Distribusi lebih terpusat.
+Median: 54.39 → Median hampir sama dengan mean, distribusi sangat simetris.
+
+2.5 Fitur Ekonomi
+InvestmentEnvironment: Mean 53.01, Std 16.74.
+EnterpriseConditions: Mean 54.79, Std 12.87 → Distribusi lebih terpusat.
+MarketAccessInfrastructure: Mean 55.02, Std 15.85.
+
+2.6 Fitur Sosial
+LivingConditions: Mean 69.80, Std 19.75 → Distribusi cukup menyebar.
+Health: Relatif tinggi dengan median sekitar 71.38.
+Education: Memiliki rata-rata tinggi (sekitar 61.93) tetapi juga menyebar.
+
+2.7 Fitur "InvestmentEnvironment"
+Mean (Rata-rata): 53.01
+Std (Standar Deviasi): 16.74 → Variabilitas cukup tinggi.
+Min & Max: 21.69 hingga 84.99 → Rentang yang luas menunjukkan ada negara dengan lingkungan investasi sangat buruk dan ada yang sangat baik.
+Median (50%): 51.25 → Median mendekati mean, menandakan distribusi relatif simetris.
+
+2.8 Fitur "EnterpriseConditions"
+Mean (Rata-rata): 54.79
+Std (Standar Deviasi): 12.87 → Variabilitas tidak terlalu besar, menunjukkan data lebih terpusat.
+Min & Max: 20.50 hingga 83.84 → Rentang besar, tetapi sebagian besar data terdistribusi di sekitar mean.
+Median (50%): 53.52 → Median mendekati mean, distribusi simetris.
+
+2.9 Fitur "MarketAccessInfrastructure"
+Mean (Rata-rata): 55.02
+Std (Standar Deviasi): 15.85 → Variabilitas cukup tinggi.
+Min & Max: 24.23 hingga 86.89 → Rentang cukup luas dengan distribusi yang agak tersebar.
+Median (50%): 55.54 → Median mendekati mean, distribusi simetris.
+
+2.10 Fitur "EconomicQuality"
+Mean (Rata-rata): 51.57
+Std (Standar Deviasi): 13.42 → Variabilitas sedang.
+Min & Max: 24.46 hingga 91.44 → Ada beberapa negara dengan kualitas ekonomi yang sangat rendah dan sangat tinggi.
+Median (50%): 61.93 → Median lebih tinggi dari mean, menunjukkan distribusi skewed ke kiri.
+
+2.11 Fitur "LivingConditions"
+Mean (Rata-rata): 69.80
+Std (Standar Deviasi): 19.75 → Variabilitas cukup besar.
+Min & Max: 19.21 hingga 95.77 → Rentang lebar menunjukkan ada negara dengan kondisi hidup yang buruk, sementara beberapa negara memiliki kondisi sangat baik.
+Median (50%): 71.38 → Median mendekati mean, distribusi relatif simetris.
+
+2.12 Fitur "Health"
+Mean (Rata-rata): 71.23 (dari data tambahan).
+Std (Standar Deviasi): 10.32 → Variabilitas kecil, menunjukkan data cukup terpusat.
+Min & Max: 45.72 hingga 90.58 → Rentang kecil, menunjukkan sebagian besar negara memiliki kondisi kesehatan yang baik.
+Median (50%): 70.95 → Median mendekati mean, distribusi simetris.
+
+2.13 Fitur "Education"
+Mean (Rata-rata): 61.93
+Std (Standar Deviasi): 12.78 → Variabilitas sedang.
+Min & Max: 29.98 hingga 89.55 → Rentang cukup besar, menunjukkan ada negara dengan tingkat pendidikan rendah dan tinggi.
+Median (50%): 62.75 → Median mendekati mean, distribusi simetris.
+
+2.14 Fitur "NaturalEnvironment"
+Mean (Rata-rata): 57.42
+Std (Standar Deviasi): 15.87 → Variabilitas cukup besar.
+Min & Max: 30.98 hingga 91.44 → Rentang lebar menunjukkan kondisi lingkungan alami yang sangat bervariasi antar negara.
+Median (50%): 57.14 → Median mendekati mean, distribusi simetris.

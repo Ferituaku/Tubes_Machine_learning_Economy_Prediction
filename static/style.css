@@ -1,0 +1,94 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #4CAF50;
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Result Box Styling */
+#result, #error {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#result {
+    background-color: #e7f4e4;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+}
+
+#error {
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}

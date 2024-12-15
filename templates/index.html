@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Cluster Negara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #4CAF50;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        label {
+            margin: 15px 0 5px;
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        span {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e7f4e4;
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Prediksi Cluster Negara</h1>
+    <div class="container">
+        <form id="predictionForm">
+            <label for="SocialCapital">Social Capital: <span id="val_SocialCapital">50</span></label>
+            <input type="range" id="SocialCapital" name="feature1" min="0" max="100" value="50"
+                oninput="updateValue('val_SocialCapital', this.value)">
+
+            <label for="Governance">Governance: <span id="val_Governance">50</span></label>
+            <input type="range" id="Governance" name="feature2" min="0" max="100" value="50"
+                oninput="updateValue('val_Governance', this.value)">
+
+            <label for="EconomicQuality">Economic Quality: <span id="val_EconomicQuality">50</span></label>
+            <input type="range" id="EconomicQuality" name="feature3" min="0" max="100" value="50"
+                oninput="updateValue('val_EconomicQuality', this.value)">
+
+            <label for="LivingConditions">Living Conditions: <span id="val_LivingConditions">50</span></label>
+            <input type="range" id="LivingConditions" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_LivingConditions', this.value)">
+
+            <label for="SafetySecurity">Safety Security: <span id="val_SafetySecurity">50</span></label>
+            <input type="range" id="SafetySecurity" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_SafetySecurity', this.value)">
+
+            <label for="PersonelFreedom">Personel Freedom: <span id="val_PersonelFreedom">50</span></label>
+            <input type="range" id="PersonelFreedom" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_PersonelFreedom', this.value)">
+
+            <label for="InvestmentEnvironment">Investment Environment: <span
+                    id="val_InvestmentEnvironment">50</span></label>
+            <input type="range" id="InvestmentEnvironment" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_InvestmentEnvironment', this.value)">
+
+            <label for="EnterpriseConditions">Enterprise Conditions: <span
+                    id="val_EnterpriseConditions">50</span></label>
+            <input type="range" id="EnterpriseConditions" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_EnterpriseConditions', this.value)">
+
+            <label for="MarketAccessInfrastructure">MarketAccess Infrastructure: <span
+                    id="val_MarketAccessInfrastructure">50</span></label>
+            <input type="range" id="MarketAccessInfrastructure" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_MarketAccessInfrastructure', this.value)">
+
+            <label for="Health">Health: <span id="val_Health">50</span></label>
+            <input type="range" id="Health" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_Health', this.value)">
+
+            <label for="Education">Education: <span id="val_Education">50</span></label>
+            <input type="range" id="Education" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_Education', this.value)">
+
+            <label for="NaturalEnvironment">Natural Environment: <span id="val_NaturalEnvironment">50</span></label>
+            <input type="range" id="NaturalEnvironment" name="feature4" min="0" max="100" value="50"
+                oninput="updateValue('val_NaturalEnvironment', this.value)">
+
+
+
+            <button type="submit">Prediksi</button>
+        </form>
+        <div id="result">Hasil Prediksi Akan Muncul di Sini</div>
+        <div id="error" class="error"></div>
+    </div>
+
+    <script>
+        function updateValue(id, value) {
+            document.getElementById(id).innerText = value;
+        }
+
+        document.getElementById('predictionForm').onsubmit = async function (event) {
+            event.preventDefault();
+
+            // Ambil semua input slider
+            const formData = new FormData(this);
+            const features = [];
+            for (let pair of formData.entries()) {
+                features.push(parseFloat(pair[1]));
+            }
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ features: features })
+                });
+
+                const result = await response.json();
+                if (result.error) {
+                    document.getElementById('error').innerText = result.error;
+                    document.getElementById('result').innerText = '';
+                } else {
+                    document.getElementById('result').innerText = `Cluster: ${result.cluster} - ${result.description}`;
+                    document.getElementById('error').innerText = '';
+                }
+            } catch (error) {
+                document.getElementById('error').innerText = 'Terjadi kesalahan saat mengirim data.';
+                document.getElementById('result').innerText = '';
+            }
+        };
+    </script>
+</body>
+
+</html>
